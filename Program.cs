@@ -21,33 +21,56 @@ void PrintArray(int[] array)
 #endregion PrintArray Function
 int[] arrayNumeri = { 1, 2, 3 };
 
-//PrintArray(arrayNumeri);
 
-#region Quadrato function
+#region Square function
 
-int Quadrato(int numero)
+int Square(int numero)
 {
     return numero * numero;
 }
 
-#endregion Quadrato function
+#endregion Square function
 
-#region Quadrato array function
+#region Square array function
 
-int[] ElevaArrayAlQuadrato(int[] array)
+int[] SquareElevation(int[] array)
 {
 
     int[]arrayCopia = (int[])array.Clone();
 
     for (int i = 0; i < arrayCopia.Length; i++)
     {
-        arrayCopia[i] = Quadrato(arrayCopia[i]);
+        arrayCopia[i] = Square(arrayCopia[i]);
     }
 
     return arrayCopia;
 }
 
-PrintArray(ElevaArrayAlQuadrato(arrayNumeri));
+PrintArray(SquareElevation(arrayNumeri));
 
-#endregion Quadrato array function
+#endregion Square array function
 
+
+#region Somma elementi array
+
+int ArrayElementsSum(int[] array)
+{
+    int sumArray = 0;
+
+    for (int i = 0; i < array.Length; i++)
+    {
+
+        sumArray = sumArray + array[i];
+
+    }
+    return sumArray;
+}
+
+Console.WriteLine();
+
+PrintArray(arrayNumeri);
+
+
+Console.WriteLine(ArrayElementsSum(arrayNumeri));
+
+#endregion Somma elementi array

@@ -66,16 +66,47 @@ int ArrayElementsSum(int[] array)
 
 #endregion Somma elementi array
 
-int[] numbersArray = { 2, 6, 7, 5, 3, 9 };
+//int[] numbersArray = { 2, 6, 7, 5, 3, 9 };
+
+//Console.WriteLine("L'array é: ");
+
+//PrintArray(numbersArray);
+
+//Console.WriteLine("L'array elevato al quadrato é: ");
+
+//PrintArray(SquareElevation(numbersArray));
+
+//Console.WriteLine("La somma dei numeri presenti nell'array é: " + ArrayElementsSum(numbersArray));
+
+//Console.WriteLine("La somma di tutti i numeri dell'array elevati al quadrato é:" + ArrayElementsSum(SquareElevation(numbersArray));
+
+
+#region BONUS
+
+Console.WriteLine("Quanti numeri vuoi inserire?");
+
+int[] userArray = new int[Convert.ToInt32(Console.ReadLine())];
+
+for( int i = 0; i < userArray.Length; i++)
+{
+
+    Console.WriteLine("Inserisci un numero");
+
+    userArray[i] = Convert.ToInt32(Console.ReadLine());
+
+}
+
 
 Console.WriteLine("L'array é: ");
 
-PrintArray(numbersArray);
+PrintArray(userArray);
 
 Console.WriteLine("L'array elevato al quadrato é: ");
 
-PrintArray(SquareElevation(numbersArray));
+PrintArray(SquareElevation(userArray));
 
-Console.WriteLine("La somma dei numeri presenti nell'array é: " + ArrayElementsSum(numbersArray));
+Console.WriteLine("La somma dei numeri presenti nell'array é: " + ArrayElementsSum(userArray));
 
-Console.WriteLine("La somma di tutti i numeri dell'array elevati al quadrato é:" + ArrayElementsSum(SquareElevation(numbersArray));
+Console.WriteLine("La somma di tutti i numeri dell'array elevati al quadrato é:" + ArrayElementsSum(SquareElevation(userArray)));
+
+#endregion BONUS

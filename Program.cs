@@ -15,11 +15,10 @@ void PrintArray(int[] array)
         Console.Write(", ");
     }
     Console.Write(array[i]);
-    Console.Write("}");
+    Console.WriteLine("}");
 }
 
 #endregion PrintArray Function
-int[] arrayNumeri = { 1, 2, 3 };
 
 
 #region Square function
@@ -30,6 +29,7 @@ int Square(int numero)
 }
 
 #endregion Square function
+
 
 #region Square array function
 
@@ -45,8 +45,6 @@ int[] SquareElevation(int[] array)
 
     return arrayCopia;
 }
-
-PrintArray(SquareElevation(arrayNumeri));
 
 #endregion Square array function
 
@@ -66,11 +64,18 @@ int ArrayElementsSum(int[] array)
     return sumArray;
 }
 
-Console.WriteLine();
-
-PrintArray(arrayNumeri);
-
-
-Console.WriteLine(ArrayElementsSum(arrayNumeri));
-
 #endregion Somma elementi array
+
+int[] numbersArray = { 2, 6, 7, 5, 3, 9 };
+
+Console.WriteLine("L'array é: ");
+
+PrintArray(numbersArray);
+
+Console.WriteLine("L'array elevato al quadrato é: ");
+
+PrintArray(SquareElevation(numbersArray));
+
+Console.WriteLine("La somma dei numeri presenti nell'array é: " + ArrayElementsSum(numbersArray));
+
+Console.WriteLine("La somma di tutti i numeri dell'array elevati al quadrato é:" + ArrayElementsSum(SquareElevation(numbersArray));
